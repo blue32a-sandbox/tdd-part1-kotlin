@@ -1,4 +1,4 @@
 package money
 
-class Dollar {
+class Dollar(val amount: Int) {
 }
