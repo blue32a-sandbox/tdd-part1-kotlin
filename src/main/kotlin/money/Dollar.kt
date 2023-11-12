@@ -1,7 +1,7 @@
 package money
 
 class Dollar(var amount: Int) {
-    fun times(multiplier: Int): Unit {
+    fun times(multiplier: Int) {
         amount *= multiplier
     }
 }
