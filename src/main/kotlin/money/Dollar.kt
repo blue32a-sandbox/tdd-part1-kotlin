@@ -1,6 +1,10 @@
 package money
 
-class Dollar(val amount: Int) {
+class Dollar(var amount: Int) {
+    init {
+        amount = 10;
+    }
+
     fun times(multiplier: Int): Unit {
     }
 }
