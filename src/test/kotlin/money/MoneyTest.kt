@@ -2,6 +2,7 @@ package money
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class MoneyTest {
@@ -16,5 +17,6 @@ class MoneyTest {
     @Test
     fun testEquality() {
         assertTrue(Dollar(5).equals(Dollar(5)))
+        assertFalse(Dollar(5).equals(Dollar(6)))
     }
 }
