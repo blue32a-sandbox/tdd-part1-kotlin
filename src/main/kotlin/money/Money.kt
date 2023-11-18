@@ -1,4 +1,4 @@
 package money
 
-open class Money {
+open class Money(protected val amount: Int) {
 }
