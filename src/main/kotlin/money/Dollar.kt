@@ -1,6 +1,6 @@
 package money
 
-class Dollar(private val amount: Int) {
+class Dollar(private val amount: Int): Money() {
     fun times(multiplier: Int): Dollar {
         return Dollar(amount * multiplier)
     }
