@@ -5,7 +5,7 @@ class Franc(amount: Int): Money(amount) {
         return Franc(amount * multiplier)
     }
     override fun equals(other: Any?): Boolean {
-        val franc = other as Franc
-        return amount == franc.amount
+        val franc: Money = other as Franc
+        return amount == franc.xxxAmount()
     }
 }
