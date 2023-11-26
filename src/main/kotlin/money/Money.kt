@@ -11,5 +11,8 @@ abstract class Money(protected val amount: Int) {
         fun dollar(amount: Int): Money {
             return Dollar(amount)
         }
+        fun franc(amount: Int): Money {
+           return Franc(amount)
+        }
     }
 }
