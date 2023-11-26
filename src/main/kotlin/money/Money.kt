@@ -8,7 +8,7 @@ abstract class Money(protected val amount: Int) {
                 && javaClass.name.equals(money.javaClass.name)
     }
     companion object {
-        fun dollar(amount: Int): Dollar {
+        fun dollar(amount: Int): Money {
             return Dollar(amount)
         }
     }
