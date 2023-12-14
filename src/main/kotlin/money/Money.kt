@@ -1,8 +1,11 @@
 package money
 
 abstract class Money(protected val amount: Int) {
+    protected abstract val currency: String
     abstract fun times(multiplier: Int): Money
-    abstract fun currency(): String
+    fun currency(): String {
+        return currency
+    }
     override fun equals(other: Any?): Boolean {
         val money = other as Money
         return amount == money.amount
