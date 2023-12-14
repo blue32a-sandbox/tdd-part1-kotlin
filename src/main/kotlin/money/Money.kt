@@ -2,6 +2,7 @@ package money
 
 abstract class Money(protected val amount: Int) {
     abstract fun times(multiplier: Int): Money
+    abstract fun currency(): String
     override fun equals(other: Any?): Boolean {
         val money = other as Money
         return amount == money.amount
