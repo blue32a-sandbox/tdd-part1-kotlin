@@ -13,7 +13,7 @@ abstract class Money(protected val amount: Int) {
     }
     companion object {
         fun dollar(amount: Int): Money {
-            return Dollar(amount)
+            return Dollar(amount, "USD")
         }
         fun franc(amount: Int): Money {
            return Franc(amount, "CHF")
