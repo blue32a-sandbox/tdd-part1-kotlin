@@ -10,7 +10,7 @@ open class Money(protected val amount: Int, protected val currency: String) {
     override fun equals(other: Any?): Boolean {
         val money = other as Money
         return amount == money.amount
-                && javaClass.name.equals(money.javaClass.name)
+                && currency().equals(money.currency())
     }
     override fun toString(): String {
         return "$amount $currency"
