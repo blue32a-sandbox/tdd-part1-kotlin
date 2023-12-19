@@ -12,6 +12,9 @@ open class Money(protected val amount: Int, protected val currency: String) {
         return amount == money.amount
                 && javaClass.name.equals(money.javaClass.name)
     }
+    override fun toString(): String {
+        return "$amount $currency"
+    }
     companion object {
         fun dollar(amount: Int): Money {
             return Dollar(amount, "USD")
