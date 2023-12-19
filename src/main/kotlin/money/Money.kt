@@ -1,7 +1,9 @@
 package money
 
-abstract class Money(protected val amount: Int, protected val currency: String) {
-    abstract fun times(multiplier: Int): Money
+open class Money(protected val amount: Int, protected val currency: String) {
+    open fun times(multiplier: Int): Money {
+        return Money(0, "")
+    }
     fun currency(): String {
         return currency
     }
