@@ -20,7 +20,7 @@ open class Money(protected val amount: Int, protected val currency: String) {
             return Dollar(amount, "USD")
         }
         fun franc(amount: Int): Money {
-           return Franc(amount, "CHF")
+           return Money(amount, "CHF")
         }
     }
 }
