@@ -17,7 +17,7 @@ open class Money(protected val amount: Int, protected val currency: String) {
     }
     companion object {
         fun dollar(amount: Int): Money {
-            return Dollar(amount, "USD")
+            return Money(amount, "USD")
         }
         fun franc(amount: Int): Money {
            return Money(amount, "CHF")
