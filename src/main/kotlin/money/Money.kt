@@ -7,7 +7,7 @@ open class Money(public val amount: Int, protected val currency: String): Expres
     fun plus(addend: Money): Expression {
         return Sum(this, addend)
     }
-    fun reduce(to: String): Money {
+    override fun reduce(to: String): Money {
         return this
     }
     fun currency(): String {
