@@ -1,10 +1,10 @@
 package money
 
-open class Money(protected val amount: Int, protected val currency: String) {
+open class Money(protected val amount: Int, protected val currency: String): Expression {
     fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
     }
-    fun plus(addend: Money): Money {
+    fun plus(addend: Money): Expression {
         return Money(amount + addend.amount, currency)
     }
     fun currency(): String {
