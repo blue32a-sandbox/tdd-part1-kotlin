@@ -4,6 +4,9 @@ open class Money(protected val amount: Int, protected val currency: String) {
     fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
     }
+    fun plus(addend: Money): Money {
+        return Money(amount + addend.amount, currency)
+    }
     fun currency(): String {
         return currency
     }
