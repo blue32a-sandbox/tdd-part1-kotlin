@@ -5,7 +5,7 @@ open class Money(protected val amount: Int, protected val currency: String): Exp
         return Money(amount * multiplier, currency)
     }
     fun plus(addend: Money): Expression {
-        return Money(amount + addend.amount, currency)
+        return Sum(this, addend)
     }
     fun currency(): String {
         return currency
@@ -23,7 +23,7 @@ open class Money(protected val amount: Int, protected val currency: String): Exp
             return Money(amount, "USD")
         }
         fun franc(amount: Int): Money {
-           return Money(amount, "CHF")
+            return Money(amount, "CHF")
         }
     }
 }
