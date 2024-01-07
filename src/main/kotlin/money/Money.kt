@@ -1,6 +1,6 @@
 package money
 
-open class Money(public val amount: Int, protected val currency: String): Expression {
+open class Money(val amount: Int, protected val currency: String): Expression {
     fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
     }
