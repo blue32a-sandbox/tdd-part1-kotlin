@@ -7,8 +7,9 @@ open class Money(val amount: Int, protected val currency: String): Expression {
     fun plus(addend: Money): Expression {
         return Sum(this, addend)
     }
-    override fun reduce(to: String): Money {
-        return this
+    override fun reduce(bank: Bank, to: String): Money {
+        val rate = if (currency.equals("CHF") && to.equals("USD")) 2 else 1
+        return Money(amount / rate, to)
     }
     fun currency(): String {
         return currency
