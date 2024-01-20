@@ -9,6 +9,7 @@ class Bank {
         rates[Pair(from, to)] = rate
     }
     fun rate(from: String, to: String): Int {
+        if (from.equals(to)) return 1
         return rates[Pair(from, to)] ?: throw NoSuchElementException("There is no '$from' to '$to' rate.")
     }
 }
