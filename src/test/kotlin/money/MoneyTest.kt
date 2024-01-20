@@ -59,4 +59,8 @@ class MoneyTest {
         val result = bank.reduce(Money.franc(2), "USD")
         assertEquals(Money.dollar(1), result)
     }
+    @Test
+    fun testArrayEquals() {
+        assertTrue(arrayOf({"abc"}).contentEquals(arrayOf({"abc"})))
+    }
 }
