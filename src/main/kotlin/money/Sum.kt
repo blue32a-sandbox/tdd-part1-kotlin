@@ -1,7 +1,7 @@
 package money
 
 class Sum(val augend: Expression, val addend: Expression): Expression {
-    fun times(multiplier: Int): Expression {
+    override fun times(multiplier: Int): Expression {
         return Sum(augend.times(multiplier), addend.times(multiplier))
     }
     override fun plus(addend: Expression): Expression {

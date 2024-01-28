@@ -1,7 +1,7 @@
 package money
 
 open class Money(val amount: Int, protected val currency: String): Expression {
-    fun times(multiplier: Int): Expression {
+    override fun times(multiplier: Int): Expression {
         return Money(amount * multiplier, currency)
     }
     override fun plus(addend: Expression): Expression {
