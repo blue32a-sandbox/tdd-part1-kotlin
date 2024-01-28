@@ -4,7 +4,7 @@ open class Money(val amount: Int, protected val currency: String): Expression {
     fun times(multiplier: Int): Expression {
         return Money(amount * multiplier, currency)
     }
-    fun plus(addend: Expression): Expression {
+    override fun plus(addend: Expression): Expression {
         return Sum(this, addend)
     }
     override fun reduce(bank: Bank, to: String): Money {
